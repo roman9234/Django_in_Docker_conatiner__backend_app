@@ -75,10 +75,26 @@ WSGI_APPLICATION = 'django_project.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        # Так как так называется сервис в docker-compose
+        'HOST': 'app-postgres',
+        # Стандартный порт
+        'PORT': 5432,
+        # Переменная названия БД, указана в environment
+        'NAME': 'django_app',
+        # Пользователь и пароль
+        'USER': 'postgres',
+        'PASSWORD': 'postgres',
     }
 }
+
+# Старая версия
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
+#     }
+# }
 
 
 # Password validation
