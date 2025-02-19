@@ -8,8 +8,10 @@
 
 
 Vagrant.configure("2") do |config|
+# Бокс – это образ операционной системы, который также может содержать установленные программы
 # базовый образ. В нашем случае lunar64
-  config.vm.box = "ubuntu/lunar64"
+#   config.vm.box = "ubuntu/lunar64"
+  config.vm.box = "ubuntu/trusty64"
   config.vm.box_check_update = false
 # настройки сети. Настраиваем перенаправление портов и статический ip-адрес.
   config.vm.network "forwarded_port", guest: 80, host: 80
@@ -20,7 +22,7 @@ Vagrant.configure("2") do |config|
   config.vm.provider "virtualbox" do |vb|
     vb.memory = "2048"
   end
-
+end
   # The most common configuration options are documented and commented below.
   # For a complete reference, please see the online documentation at
   # https://docs.vagrantup.com.

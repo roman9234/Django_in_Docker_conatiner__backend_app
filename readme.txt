@@ -78,7 +78,7 @@ docker compose up -d
 -d значит что запуск в режиме демона - фоновом режиме
 
 //Запуск контйнера из нового билда
-cker compose up -d --build
+docker compose up -d --build
 
 
 //список контейнеров

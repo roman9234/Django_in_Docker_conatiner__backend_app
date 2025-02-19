@@ -13,3 +13,45 @@ vagrant -v
 //Создание Vagrantfile в текущей директории. В нем на языке Ruby описывается конфигурация виртуальной машины
 vagrant init
 
+// Запуск машины
+vagrant up
+
+//Подключение по ssh
+vagrant ssh
+
+Для убодства вместо сервера используем Vagrant
+---- Запуск на Linux Сервере без Docker ----
+Будем использовать:
+gunicorn
+nginx
+
+//Переходим в нужный нам каталог
+cd opt/myapp
+
+//Обновляем сведения о пакетах
+sudo apt update
+
+//Устанавливаем pip venv postgres nginx - они нужны для проекта
+sudo apt install python3-pip postgresql nginx
+
+sudo apt-get update
+sudo apt-get install python-virtualenv
+
+Если пакета нет - статья https://dzen.ru/a/ZQMEyobIzHVBj70y
+
+//Поиск пакета
+sudo apt search virtualenv
+
+Создаём виртуальное окружение
+virtualenv venv
+
+. ./venv/bin/activate
+
+---- Запуск на Linux Серере через docker-compose ----
+
+
+
+
+
+
+
