@@ -15,6 +15,7 @@ vagrant init
 
 // Запуск машины
 vagrant up
+vagrant provision
 
 //Подключение по ssh
 vagrant ssh
@@ -32,10 +33,10 @@ cd opt/myapp
 sudo apt update
 
 //Устанавливаем pip venv postgres nginx - они нужны для проекта
-sudo apt install python3-pip postgresql nginx
+sudo apt install python3-pip python3-virtualenv postgresql nginx
 
 sudo apt-get update
-sudo apt-get install python-virtualenv
+sudo apt-get install python3-virtualenv
 
 Если пакета нет - статья https://dzen.ru/a/ZQMEyobIzHVBj70y
 

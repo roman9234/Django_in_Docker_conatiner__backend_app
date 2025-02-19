@@ -12,6 +12,7 @@ Vagrant.configure("2") do |config|
 # базовый образ. В нашем случае lunar64
 #   config.vm.box = "ubuntu/lunar64"
   config.vm.box = "ubuntu/trusty64"
+#   config.vm.box = "ubuntu/focal64"
   config.vm.box_check_update = false
 # настройки сети. Настраиваем перенаправление портов и статический ip-адрес.
   config.vm.network "forwarded_port", guest: 80, host: 80
