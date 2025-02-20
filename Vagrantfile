@@ -11,7 +11,9 @@ Vagrant.configure("2") do |config|
 # Бокс – это образ операционной системы, который также может содержать установленные программы
 # базовый образ. В нашем случае lunar64
 #   config.vm.box = "ubuntu/lunar64"
-  config.vm.box = "ubuntu/trusty64"
+  config.vm.box = "ubuntu/jammy64"
+#   trusty64 - старый бокс, на нём python3-virtualenv не работает
+#   config.vm.box = "ubuntu/trusty64"
 #   config.vm.box = "ubuntu/focal64"
   config.vm.box_check_update = false
 # настройки сети. Настраиваем перенаправление портов и статический ip-адрес.
