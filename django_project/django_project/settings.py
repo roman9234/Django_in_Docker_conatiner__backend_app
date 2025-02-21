@@ -73,20 +73,38 @@ WSGI_APPLICATION = 'django_project.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
 
+# При разворачивании на VM
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
         # Так как так называется сервис в docker-compose
-        'HOST': 'app-postgres',
+        'HOST': '127.0.0.1',
         # Стандартный порт
         'PORT': 5432,
         # Переменная названия БД, указана в environment
         'NAME': 'django_app',
         # Пользователь и пароль
-        'USER': 'postgres',
-        'PASSWORD': 'postgres',
+        'USER': 'django_app',
+        'PASSWORD': 'django_app',
     }
 }
+
+# При разворачивании на docker-compose:
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         # Так как так называется сервис в docker-compose
+#         'HOST': 'app-postgres',
+#         # Стандартный порт
+#         'PORT': 5432,
+#         # Переменная названия БД, указана в environment
+#         'NAME': 'django_app',
+#         # Пользователь и пароль
+#         'USER': 'postgres',
+#         'PASSWORD': 'postgres',
+#     }
+# }
+
 
 # Старая версия
 # DATABASES = {
