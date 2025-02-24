@@ -30,7 +30,6 @@ DEBUG = False
 # localhost в рамках сервера
 # myapp.django прописан в etc/hosts
 ALLOWED_HOSTS = ['localhost', 'myapp.django']
-# ALLOWED_HOSTS = ['localhost']
 
 
 # Application definition
@@ -155,7 +154,8 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.1/howto/static-files/
 
 STATIC_URL = 'static/'
-
+# Настройка статических файлов для Nginx
+STATIC_ROOT = BASE_DIR.parent / 'static'
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 
