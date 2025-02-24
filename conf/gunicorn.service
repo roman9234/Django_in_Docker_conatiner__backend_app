@@ -11,7 +11,7 @@ ExecStart=/opt/myapp/venv/bin/gunicorn \
           --access-logfile - \
           --workers 3 \
           --bind unix:/run/gunicorn.sock \
-          app.wsgi:application
+          django_project.wsgi:application
 
 [Install]
 WantedBy=multi-user.target
