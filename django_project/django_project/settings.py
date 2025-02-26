@@ -29,7 +29,7 @@ DEBUG = False
 # На проде надо прописать тут те имена
 # localhost в рамках сервера
 # myapp.django прописан в etc/hosts
-ALLOWED_HOSTS = ['localhost', 'myapp.django']
+ALLOWED_HOSTS = ['localhost', 'myapp.django', '127.0.0.1']
 
 
 # Application definition
